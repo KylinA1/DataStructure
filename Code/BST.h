@@ -54,6 +54,10 @@ public:
         }
     }
 
+
+
+
+
     void InPrint(){visit(m_root);};//Inorder print gives sorted 
     void visit(const node* root){
         if(root== nullptr)
@@ -63,18 +67,6 @@ public:
             std::cout<<root->data<<std::endl;
             visit(root->right);
         }
-    }
-
-    //Pre-order visit. It has never been asked in the exam before. 
-
-    void PrePrint(){preVisit(m_root);}; 
-    void preVisit(const node* root){
-        if(root== nullptr)
-            return;
-        else
-            std::cout<<root->data<<std::endl
-            visit(root->left);
-            visit(root->right); 
     }
 };
 
