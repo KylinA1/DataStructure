@@ -119,13 +119,18 @@ public:
         }
     }
 
+
+
     void remove(Itr<T> ptr){
         if(ptr==beginning){
             beginning=beginning->next;
-        }else if(ptr==ending){
-            ending=ending->prev;
         }else{
             ptr->prev->next=ptr->next;
+        }
+
+        if(ptr==ending){
+            ending=ending->prev;
+        }else{
             ptr->next->prev=ptr->prev;
         }
         delete ptr.operator->();

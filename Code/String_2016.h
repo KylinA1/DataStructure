@@ -95,7 +95,7 @@ public:
             ++i;
         }
         while(j<rhs.length){
-            result.str[i]=rhs.str[j];
+            result.str[i]=str[j];
             ++i;
             ++j;
         }
